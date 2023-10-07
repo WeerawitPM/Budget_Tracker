@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/313/313062.png" type="image/x-icon">
+    <title>Document</title>
+    <style>
+        ::-webkit-calendar-picker-indicator {
+            filter: invert(1);
+        }
+
+        .text-white::placeholder {
+            color: #fff;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+
+<body class="bg-dark">
+    <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://cdn-icons-png.flaticon.com/512/313/313062.png" alt="Logo" width="30" height="30"
+                    class="d-inline-block align-text-top">
+                Budget Tracker | บันทึกรายรับ-รายจ่าย
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">หน้าแรก</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">รายรับ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">รายจ่าย</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container d-flex flex-column justify-content-center align-items-center w-100 text-white mt-5">
+        <img src="https://cdn-icons-png.flaticon.com/512/313/313062.png" alt="img-on-flaticon"
+            style="max-width: 200px; max-height: 200px;">
+        <h1 class="mt-4 mb-4">มาบันทึกรายรับ-รายจ่ายกัน !</h1>
+        <div class="container d-flex justify-content-center align-items-center mb-4">
+            <div class="card border-0 border-start border-success border-5 me-1" style="width: 18rem;">
+                <div class="card-body">
+                    <h4 class="card-title text-success">รายรับ</h4>
+                    <h2 class="card-text" id="income_value">฿0</h2>
+                </div>
+            </div>
+            <div class="card border-0 border-start border-danger border-5 ms-1" style="width: 18rem;">
+                <div class="card-body">
+                    <h4 class="card-title text-danger">รายจ่าย</h4>
+                    <h2 class="card-text" id="expense_value">฿0</h2>
+                </div>
+            </div>
+        </div>
+        <form class="d-flex flex-column mb-5 justify-content-between" role="search" action="javascript:addBudget()">
+            <div class="d-flex flex-row">
+                <input class="form-control form-control-lg me-1 bg-dark text-white icon-white" type="datetime-local"
+                    id="date_time" required>
+                <input class="form-control form-control-lg ms-1 bg-dark text-white" type="number"
+                    placeholder="ระบุจำนวนเงิน" id="money" required>
+            </div>
+            <input class="form-control form-control-lg bg-dark text-white mt-2" type="text" placeholder="ระบุคำอธิบาย"
+                id="description" required>
+            <button class="btn btn-outline-success mt-2" type="submit">บันทึก</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+</body>
+
+</html>
